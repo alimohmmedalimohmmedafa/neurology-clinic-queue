@@ -1,0 +1,107 @@
+:root {
+    --bg: #0f172a;
+    --ink: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --paused: #fbbf24;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    overflow: hidden;
+}
+
+.audio-hint {
+    position: fixed;
+    top: 14px;
+    inset-inline-start: 50%;
+    transform: translateX(50%);
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 10%);
+    color: var(--muted);
+    font-size: 14px;
+    z-index: 10;
+}
+
+.audio-tools {
+    position: fixed;
+    bottom: 18px;
+    inset-inline-end: 18px;
+    z-index: 10;
+}
+
+.audio-test-btn {
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgb(148 163 184 / 40%);
+    background: rgb(255 255 255 / 8%);
+    color: var(--muted);
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.audio-test-btn:hover,
+.audio-test-btn:focus-visible {
+    color: var(--ink);
+    border-color: var(--accent);
+    outline: none;
+}
+
+.stage-screen {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    text-align: center;
+    padding: 40px;
+}
+
+.message {
+    margin: 0;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.paused-message {
+    color: var(--paused);
+}
+
+.service-label {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.queue-number {
+    font-size: 200px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: 8px;
+    color: var(--ink);
+}
+
+.please-enter {
+    margin-top: 18px;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--accent);
+}

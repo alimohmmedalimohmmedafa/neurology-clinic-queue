@@ -1,0 +1,163 @@
+.page {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 24px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.filters-search,
+.filters-select {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--ink);
+}
+
+.filters-search {
+    flex: 1 1 240px;
+}
+
+.table-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.table-meta {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.patients-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.patients-table th,
+.patients-table td {
+    padding: 12px 16px;
+    text-align: start;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.patients-table th {
+    background: var(--bg);
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.patients-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.cell-number {
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.cell-time {
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.status-chip {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.st-waiting {
+    background: #dbeafe;
+    color: var(--blue);
+}
+
+.st-called {
+    background: #fef3c7;
+    color: var(--amber);
+}
+
+.st-skipped {
+    background: var(--line);
+    color: var(--muted);
+}
+
+.st-completed {
+    background: #dcfce7;
+    color: var(--green);
+}
+
+.row-current td {
+    background: #fffbeb;
+    font-weight: 700;
+}
+
+.cell-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cell-actions .btn {
+    padding: 7px 12px;
+    font-size: 13px;
+}
+
+.no-actions {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.empty-row {
+    color: var(--muted);
+    text-align: center;
+    padding: 30px 16px !important;
+}
+
+/* ---------- review ticket: hidden print area ---------- */
+
+body.today-page .ticket-print {
+    display: none;
+    text-align: center;
+}
+
+@media print {
+    body.today-page {
+        background: #fff;
+    }
+
+    body.today-page .app-shell {
+        display: none !important;
+    }
+
+    body.today-page .ticket-print {
+        display: block !important;
+    }
+
+    body.today-page .ticket-print .ticket {
+        border-color: #000;
+        max-width: 100%;
+        margin: 0;
+    }
+}
